@@ -1,0 +1,10 @@
+.container__footer {
+    display: flex;
+    padding: 32px;
+    color: #464646;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+

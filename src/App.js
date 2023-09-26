@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./Components/Header";
+import GlobalStyle from "./GlobalStyle";
+import Presentation from "./Components/Sections/Presentation";
+import AboutMe from "./Components/Sections/AboutMe";
+import Skills from "./Components/Sections/Skills";
+import Hobbies from "./Components/Sections/Hobbies";
+import ProfesionalAcademicTraining from "./Components/Sections/AcademicTraining/professional";
+import ProfessionalExperience from "./Components/Sections/ProfessionalExperience";
+import AcademicTrainingCourses from "./Components/Sections/AcademicTraining/courses";
+import FormContact from "./Components/Sections/Contact";
+import Footer from "./Components/Sections/Footer";
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App col-md-6 ps-5 d-flex align-items-center">
+        <GlobalStyle />
+        <Header />
+        <br></br>
+        <Presentation />
+        <br></br>
+        <AboutMe />
+        <Skills />
+        <Hobbies />
+        <ProfesionalAcademicTraining />
+        <AcademicTrainingCourses />
+        <ProfessionalExperience />
+        <FormContact/>
+        <Footer/>
+      </div>
+
+    </>
   );
 }
 

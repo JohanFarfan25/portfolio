@@ -1,0 +1,61 @@
+.about__me {
+    text-align: justify;
+    background: #EAF2FD;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-right: 6%;
+    padding-left: 6%;
+    padding: 32px;
+}
+
+.about__me__title {
+    color: #464646;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.about__me__description {
+    color: #464646;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 60%;
+}
+.about__me__signatured {
+    width: 200px;
+    height: 52px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+@media screen and (min-width:0) {
+    .about__me__description {
+        width: 100%;
+    }
+    .about__me__title{
+        font-size: 22px;
+    }
+
+    .about__me__description{
+        font-size: 14px;
+    }
+  }
+
+@media screen and (min-width:768px) {
+    .about__me__description {
+        width: 70%;
+    }
+    .about__me {
+        padding: 64px;
+    }
+    .about__me__title{
+        font-size: 32px;
+    }
+
+    .about__me__description{
+        font-size: 16px;
+    }
+  }
+

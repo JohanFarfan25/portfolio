@@ -1,0 +1,72 @@
+.container_rotative{
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor {
+  position: relative;
+}
+
+.imagenDelante,
+.imagenDetras {
+  margin-top: 1rem;
+  display: flex;
+  transition: 10000s;
+  width: 100%;
+  height: 100%;
+}
+
+.imagenDelante img,
+.imagenDetras img {
+    width: 100%;
+    height: 100%;
+}
+
+.imagenDelante {
+  opacity: 1;
+}
+
+.imagenDetras {
+  opacity: 0;
+}
+
+.icon{
+    position: relative;
+    margin-top: 50%;
+    margin-left: 1%;
+}
+
+.flip-container {
+  background-color: transparent;
+  perspective: 1000px;
+  margin:0 auto;
+  width: 100%;
+  height: 100%;
+}
+.card {
+  position: relative;
+  display:inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+}
+.frente, .dorso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.frente {
+  display: flex;
+}
+
+.dorso {
+  transform: rotateY(-180deg);
+  text-align:center;
+}

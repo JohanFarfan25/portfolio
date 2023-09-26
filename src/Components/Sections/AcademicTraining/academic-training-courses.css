@@ -1,0 +1,125 @@
+.academinc_training_courses {
+  background: #EAF2FD;
+  padding: 1rem;
+}
+.academic_training_title {
+  color: #464646;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.academic_training_courses_subTitle {
+  color: #464646;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.slider_courses {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image_courses {
+  display: flex;
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  margin-top: 2rem;
+}
+
+
+@media screen and (min-width:0) {
+
+  .academinc_training_courses {
+    height: 30vh;
+  }
+
+  .academic_training_title {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .academic_training_courses_subTitle {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .swiper_slide {
+    height: 250px;
+    width: 100%, ;
+  }
+
+  .swiper_slide_div {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  .swiper_slide_div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px #CCC;
+  }
+}
+
+@media screen and (min-width:768px) {
+
+  .academinc_training_courses {
+    height: 50vh;
+  }
+
+  .swiper_slide {
+    height: 270px;
+    width: 100%, ;
+  }
+
+  .swiper_slide_div {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  .image_courses {
+    display: flex;
+    width: 0%;
+    height: 30%;
+    position: absolute;
+    margin-top: 2rem;
+  }
+
+  .academic_training_title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .academic_training_courses_subTitle {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .swiper_slide_div img {
+    object-fit: cover;
+    width: 80%;
+    height: 100%;
+    object-position: center;
+    padding: 2px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px #CCC;
+  }
+}
