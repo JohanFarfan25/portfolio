@@ -7,12 +7,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import StarBorder from '@material-ui/icons/StarBorder';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
-import LogoBodytech from "../../Logo/Bodytech";
 
 import { ProfessionalExperienceList } from "./ProfessionalExperienceList";
 
@@ -56,7 +53,7 @@ const ProfessionalExperience = () => {
                                  {item.subTitle} 
                                 </div>
                             </ListItemText>
-                            {(item.id == open) ? <ExpandLess /> : <ExpandMore />}
+                            {(item.id == open) ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                         </ListItem>
                         <Collapse in={item.id == open} timeout="auto" unmountOnExit>
                             <List component="div" disablePadding>
