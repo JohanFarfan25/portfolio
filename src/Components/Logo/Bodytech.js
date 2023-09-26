@@ -1,4 +1,3 @@
-import { Padding } from "@mui/icons-material"
 
 const LogoBodytech = () => {
     return (

@@ -5,7 +5,7 @@ import { IconButton } from '@mui/material';
 import { IconOutlineArrowLeft, IconOutlineArrowRight } from '../../buttons/Button';
 import RotativeImagen from "../../RotativeImagen";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Controller, Autoplay } from 'swiper/modules';
+import { Controller } from 'swiper/modules';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';

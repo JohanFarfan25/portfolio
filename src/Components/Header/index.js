@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { Link } from "@mui/material";
 import "./Header.css";
 import Logo from "../Logo";

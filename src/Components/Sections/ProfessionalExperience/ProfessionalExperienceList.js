@@ -1,7 +1,3 @@
-import certificadoFinalFrontend from "../../../assets/img/academic/Alura/certificado_final_frontend.png";
-import backCertificadoFinalFrontend from "../../../assets/img/academic/Alura/back_principiante_programacion.png";
-import senaFront from "../../../assets/img/academic/sena/sena_front.png";
-import senaBack from "../../../assets/img/academic/sena/sena_back.png";
 import LogoBodytech from "../../Logo/Bodytech";
 
 
