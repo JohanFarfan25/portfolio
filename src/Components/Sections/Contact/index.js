@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, TextField } from "@material-ui/core";
+import { Button, TextField } from "@mui/material";
 import imgContact from "../../../assets/img/contacto.png";
 import "./Contact.css";
 
