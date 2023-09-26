@@ -18,7 +18,7 @@ const ProfessionalExperience = () => {
     const [open, setOpen] = useState(0);
 
     const handleClick = (index) => {
-        if(index == open){
+        if(index === open){
             setOpen(null);
         }else{
  setOpen(index);
@@ -53,9 +53,9 @@ const ProfessionalExperience = () => {
                                  {item.subTitle} 
                                 </div>
                             </ListItemText>
-                            {(item.id == open) ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                            {(item.id === open) ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                         </ListItem>
-                        <Collapse in={item.id == open} timeout="auto" unmountOnExit>
+                        <Collapse in={item.id === open} timeout="auto" unmountOnExit>
                             <List component="div" disablePadding>
                                 {
                                     item.list.map((value,index) => (
