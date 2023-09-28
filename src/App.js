@@ -10,6 +10,7 @@ import ProfessionalExperience from "./Components/Sections/ProfessionalExperience
 import AcademicTrainingCourses from "./Components/Sections/AcademicTraining/courses";
 import FormContact from "./Components/Sections/Contact";
 import Footer from "./Components/Sections/Footer";
+import { ButtonNavegator } from "./Components/buttons/Button";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <GlobalStyle />
         <Header />
         <br></br>
+        <ButtonNavegator/>
         <Presentation />
         <br></br>
         <AboutMe />

@@ -12,7 +12,8 @@ export const SkilslList= [
         href:"#",
         src:html,
         classItem:"skills__items",
-        classImg:"skills__items_img"
+        classImg:"skills__items_img",
+        progress:60
     },
     {
         name:"PHP",
@@ -20,7 +21,8 @@ export const SkilslList= [
         href:"#",
         src:php,
         classItem:"skills__items",
-        classImg:"skills__items_img"
+        classImg:"skills__items_img",
+        progress:80
     },
     {
         name:"Javascript",
@@ -28,7 +30,8 @@ export const SkilslList= [
         href:"#",
         src:js,
         classItem:"skills__items",
-        classImg:"skills__items_img"
+        classImg:"skills__items_img",
+        progress:50
     },
     {
         name:"React",
@@ -36,7 +39,8 @@ export const SkilslList= [
         href:"#",
         src:react,
         classItem:"skills__items",
-        classImg:"skills__items_img"
+        classImg:"skills__items_img",
+        progress:50
     },
     {
         name:"CSS",
@@ -44,6 +48,7 @@ export const SkilslList= [
         href:"#",
         src:cssFile,
         classItem:"skills__items",
-        classImg:"skills__items_img"
+        classImg:"skills__items_img",
+        progress:60
     }
 ];

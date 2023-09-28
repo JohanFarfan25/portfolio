@@ -1,17 +1,30 @@
 import { useState } from "react";
 import { Button, TextField } from "@mui/material";
-import imgContact from "../../../assets/img/contacto.png";
 import "./Contact.css";
+import emailjs from 'emailjs-com';
+import { AccesEmailJs } from "../../../Services/EmailJs";
+
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+import { WhatsAppButton } from "../../buttons/Button";
+
 
 
 const FormContact = () => {
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
-    const [messageContact, setmMessageContact] = useState('');
-    const [isValid, setIsValid] = useState(false);
+    const [from_name, setName] = useState('');
+    const [message, setmMessage] = useState('');
+    const [from_email, setEmail] = useState('');
     const [errorEmail, setErrorEmail] = useState("");
+    const [isValid, setIsValid] = useState(false);
+
+    const userID = AccesEmailJs.userID;
+    const serviceID = AccesEmailJs.serviceID;
+    const templateID = AccesEmailJs.templateID;
+    const to_name = AccesEmailJs.emailID;
+
+    const MySwal = withReactContent(Swal)
+
     const [error, setError] = useState({
         name: {
             error: false,
@@ -19,6 +32,7 @@ const FormContact = () => {
         }
     });
 
+    //Validación caracteres mínimos en el input
     function validateInputLegthOnblur(nombre) {
         if (nombre.length >= 3) {
             return { name: { error: false, message: '' } }
@@ -27,6 +41,7 @@ const FormContact = () => {
         }
     }
 
+    //Validación de email
     function validateEmail(email) {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -39,9 +54,48 @@ const FormContact = () => {
         }
     }
 
+    //Lógica de formulario
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        var emailData = {
+            to_name: to_name,
+            from_name: from_name,
+            from_email: from_email,
+            message: message
+        };
+        try {
+            let response = await emailjs.send(serviceID, templateID, emailData, userID);
+            if (response && response?.text === "OK") {
+                MySwal.fire({
+                    title: <strong>Envio exitoso!</strong>,
+                    html: <i>¡Muchas gracias por tenerme en cuenta, me pondré en contacto con usted lo antes posible!</i>,
+                    icon: 'success'
+                })
+                setName('');
+                setEmail('');
+                setmMessage('');
+            } else {
+                MySwal.fire({
+                    title: <strong>Upss!</strong>,
+                    html: <i>¡Error al enviar el correo electrónico, intentalo nuevamente!</i>,
+                    icon: 'info'
+                })
+            }
+        } catch (error) {
+            MySwal.fire({
+                title: <strong>Upss!</strong>,
+                html: <i>{error}</i>,
+                icon: 'info'
+            })
+        }
+    };
+
     return (
         <section className="contact">
-            <img className="contact_image" src={imgContact}></img>
+            <div className="contact__icon_whatsapp">
+                <WhatsAppButton className="icon__whatsapp"/>
+            </div>
             <div className="container_form">
                 <h1 className="title">Contacto</h1>
                 <p className="description">¿Quieres contactarme?
@@ -49,35 +103,32 @@ const FormContact = () => {
                 </p>
                 <form
                     className="contact__form"
-                    onSubmit={(e) => {
-                        e.preventDefault()
-                    }}
+                    onSubmit={handleSubmit}
                 >
                     <TextField
                         fullWidth
                         required
-                        id="name"
+                        id="from_name"
                         label="Nombre"
                         variant="outlined"
                         margin="normal"
                         onChange={(e) => { setName(e.target.value) }}
-                        value={name}
+                        value={from_name}
                         error={error.name.error}
                         helperText={error.name.error ? error.name.message : ""}
                         onBlur={(e) => { setError(validateInputLegthOnblur(e.target.value)) }}
 
                     />
-
                     <TextField
                         fullWidth
                         required
-                        id="email"
-                        label="Email"
+                        id="from_email"
+                        label="Email de contacto"
                         variant="outlined"
                         margin="normal"
                         onChange={(e) => { setEmail(e.target.value) }}
                         onBlur={(e) => { validateEmail(e.target.value) }}
-                        value={email}
+                        value={from_email}
                         error={isValid}
                         helperText={errorEmail}
                     />
@@ -85,29 +136,19 @@ const FormContact = () => {
                     <TextField
                         fullWidth
                         required
-                        id="subject"
-                        label="Asunto"
-                        variant="outlined"
-                        margin="normal"
-                        onChange={(e) => { setSubject(e.target.value) }}
-                        value={subject}
-                    />
-
-                    <TextField
-                        fullWidth
                         id="message"
                         label="Mensaje"
                         variant="outlined"
                         margin="normal"
-                        onChange={(e) => { setmMessageContact(e.target.value) }}
-                        value={messageContact}
+                        onChange={(e) => { setmMessage(e.target.value) }}
+                        value={message}
                     />
                     <div className="contact_button">
                         <Button
                             variant="contained"
                             type="submit"
                         >
-                        Registrarse
+                            Enviar
                         </Button>
                     </div>
                 </form>

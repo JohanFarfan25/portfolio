@@ -1,0 +1,68 @@
+.button__navegation {
+    border-radius: 100%;
+    background: #464646;
+    color: #ffffff;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    z-index: 15;
+    text-align: center;
+    margin-left: 90%;
+    overflow: hidden;
+}
+
+
+.button__navegation:hover {
+    background: #ffffff;
+    color: #464646;
+    border-radius: 100%;
+}
+
+.icon {
+    align-items: center;
+    color: #ffffff;
+    border-radius: 100%;
+}
+
+.contact__icon_whatsapp {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+}
+
+.icon:hover {
+    align-items: center;
+    color: #464646;
+}
+
+.container_whatsapp a {
+    color: #464646;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (min-width:0) {
+    .button__navegation {
+        display: none;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+
+    .button__navegation {
+        display: flex;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction:unset
+    }
+}

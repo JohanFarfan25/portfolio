@@ -5,7 +5,7 @@ import { HeaderItems } from "./HeaderItems";
 
 const Header = () => {
     return (
-        <header className="head">
+        <header className="head" id="head">
             <Logo />
             <nav>
                 <ul className="menu__lista">

@@ -24,14 +24,17 @@
     font-style: normal;
     line-height: normal;
     margin-bottom: 1rem;
+    width: 90%;
 }
 
-/* .contact__form{
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-} */
+.container_form{
+    gap: 32px;
+    box-shadow: 4px 4px 4px #CCC;
+}
 
+.contact__form{
+    width: 90%;
+}
 
 .form__contact__message {
     display: flex;
@@ -79,7 +82,7 @@
 
     .contact {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .contact_image {

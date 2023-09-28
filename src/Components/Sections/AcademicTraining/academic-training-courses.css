@@ -1,3 +1,4 @@
+
 .academinc_training_courses {
   background: #EAF2FD;
   padding: 1rem;
@@ -37,6 +38,9 @@
 
 
 @media screen and (min-width:0) {
+  .container_form{
+    width: 100%;
+  }
 
   .academinc_training_courses {
     height: 30vh;
@@ -77,6 +81,9 @@
 }
 
 @media screen and (min-width:768px) {
+  .container_form{
+    width: 50%;
+  }
 
   .academinc_training_courses {
     height: 50vh;
